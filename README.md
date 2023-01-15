@@ -45,7 +45,14 @@ The authentication middleware function gets called before the code in the app.ge
 
 ## Authentication Middleware
 
+The req.query.admin varable can be set to "true" to simulate user authentication.
 
+The req.query.admin variable can be set to "true" by adding ?admin=true to the URL.
 
+The req (request) variable can be used to pass information from one middleware function to another.
+
+For example, we can set req.admin = true, and req.admin will be accessible in the app.get function. 
+
+Note: The next() function does not act like a 'return' statement, it only executes the next portion of middleware.
 
 
