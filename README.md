@@ -41,3 +41,8 @@ You can create a middleware function specific to a single action.
 For example, you can add an authentication middleware function to a specific app.get route by adding it as a parameter.
 
 The authentication middleware function gets called before the code in the app.get route.
+
+
+## Authentication Middleware
+
+
