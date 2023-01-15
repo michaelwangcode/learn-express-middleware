@@ -33,3 +33,11 @@ The 'next' parameter is often omitted in the app.get functions because we don't 
 
 Middleware is run in the order that they are defined in the server.js file.
 
+
+## Single Action Middleware
+
+You can create a middleware function specific to a single action.
+
+For example, you can add an authentication middleware function to a specific app.get route by adding it as a parameter.
+
+The authentication middleware function gets called before the code in the app.get route.

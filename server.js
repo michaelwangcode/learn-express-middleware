@@ -16,7 +16,7 @@ app.get("/", (req, res) => {
 
 
 // Get route for /users page
-app.get("/users", (req, res) => {
+app.get("/users", auth, (req, res) => {
   console.log("Users Page");
   res.send("Users Page");
 });
@@ -25,6 +25,15 @@ app.get("/users", (req, res) => {
 // Log in middleware function
 function logger(req, res, next) {
   console.log("Log");
+
+  // Advance to the next piece of middleware
+  next();
+}
+
+
+// Authentication middleware function
+function auth(req, res, next) {
+  console.log("Auth");
 
   // Advance to the next piece of middleware
   next();
